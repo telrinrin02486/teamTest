@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-04-08" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.6" locale="ja_JP">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="名前" width="158" order="0"/>
+        <field id="tpd4" name="開始日" width="62" order="1"/>
+        <field id="tpd5" name="終了日" width="61" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="名前" width="210" order="0"/>
+        <field id="1" name="役割" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="61" name="アセットの用意" meeting="false" start="2018-04-12" duration="36" complete="0" expand="true">
+            <task id="73" name="部屋の仮アセット" color="#8cb6ce" meeting="false" start="2018-04-12" duration="1" complete="0" thirdDate="2018-04-12" thirdDate-constraint="0" expand="true">
+                <depend id="0" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="74" name="敵の仮アセット" color="#8cb6ce" meeting="false" start="2018-04-12" duration="1" complete="0" thirdDate="2018-04-12" thirdDate-constraint="0" expand="true"/>
+            <task id="75" name="音の仮アセット" color="#8cb6ce" meeting="false" start="2018-04-13" duration="3" complete="0" thirdDate="2018-04-13" thirdDate-constraint="0" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="63" name="部屋のアセット" meeting="false" start="2018-04-12" duration="36" complete="0" expand="true"/>
+            <task id="65" name="敵のアセット" meeting="false" start="2018-04-12" duration="36" complete="0" expand="true"/>
+            <task id="68" name="音のアセット" meeting="false" start="2018-04-12" duration="36" complete="0" expand="true"/>
+        </task>
+        <task id="0" name="マップ作成" meeting="false" start="2018-04-13" duration="19" complete="0" expand="true">
+            <task id="97" name="マップ設計" color="#8cb6ce" meeting="false" start="2018-04-13" duration="7" complete="0" thirdDate="2018-04-13" thirdDate-constraint="0" expand="true">
+                <depend id="42" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="42" name="メインルーム" color="#8cb6ce" meeting="false" start="2018-04-24" duration="2" complete="0" thirdDate="2018-04-13" thirdDate-constraint="0" expand="true">
+                <depend id="57" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="21" name="監視される部屋１" color="#8cb6ce" meeting="false" start="2018-04-24" duration="2" complete="0" thirdDate="2018-04-13" thirdDate-constraint="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="監視される部屋２" color="#8cb6ce" meeting="false" start="2018-04-26" duration="2" complete="0" thirdDate="2018-04-17" thirdDate-constraint="0" expand="true"/>
+            <task id="25" name="監視される部屋３" color="#8cb6ce" meeting="false" start="2018-04-26" duration="2" complete="0" thirdDate="2018-04-17" thirdDate-constraint="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="監視される部屋４" color="#8cb6ce" meeting="false" start="2018-04-30" duration="2" complete="0" thirdDate="2018-04-19" thirdDate-constraint="0" expand="true"/>
+            <task id="29" name="監視される部屋５" color="#8cb6ce" meeting="false" start="2018-04-30" duration="2" complete="0" thirdDate="2018-04-19" thirdDate-constraint="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" name="監視される部屋６" color="#8cb6ce" meeting="false" start="2018-05-02" duration="2" complete="0" thirdDate="2018-04-23" thirdDate-constraint="0" expand="true"/>
+            <task id="33" name="監視される部屋７" color="#8cb6ce" meeting="false" start="2018-05-02" duration="2" complete="0" thirdDate="2018-04-23" thirdDate-constraint="0" expand="true">
+                <depend id="35" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="35" name="監視される部屋８" color="#8cb6ce" meeting="false" start="2018-05-04" duration="2" complete="0" thirdDate="2018-04-25" thirdDate-constraint="0" expand="true"/>
+            <task id="37" name="監視される部屋９" color="#8cb6ce" meeting="false" start="2018-05-04" duration="2" complete="0" thirdDate="2018-04-25" thirdDate-constraint="0" expand="true">
+                <depend id="39" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="39" name="監視される部屋１０" color="#8cb6ce" meeting="false" start="2018-05-08" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+            <task id="41" name="監視される部屋１１" color="#8cb6ce" meeting="false" start="2018-05-08" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                <depend id="14" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="1" name="監視カメラ作成" color="#000000" meeting="false" start="2018-04-12" duration="14" complete="0" thirdDate="2018-04-12" thirdDate-constraint="0" expand="true">
+            <task id="17" name="カメラの動き制御スクリプト作成" color="#8cb6ce" meeting="false" start="2018-04-12" duration="7" complete="0" thirdDate="2018-04-12" thirdDate-constraint="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" name="カメラエフェクト" color="#8cb6ce" meeting="false" start="2018-04-23" duration="7" complete="0" thirdDate="2018-04-23" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="57" name="部屋両サイドのボタン" meeting="false" start="2018-04-26" duration="14" complete="0" expand="true">
+            <task id="7" name="通路確認ライト制作" color="#8cb6ce" meeting="false" start="2018-04-26" duration="7" complete="0" thirdDate="2018-04-17" thirdDate-constraint="0" expand="true">
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="2" name="シャッター制作" color="#8cb6ce" meeting="false" start="2018-05-07" duration="7" complete="0" thirdDate="2018-04-26" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="8" name="敵制作成" color="#8cb6ce" meeting="false" start="2018-04-12" duration="20" complete="0" thirdDate="2018-04-12" thirdDate-constraint="0" expand="true"/>
+        <task id="56" name="ジャイロを快適にする" color="#8cb6ce" meeting="false" start="2018-04-12" duration="36" complete="0" thirdDate="2018-04-11" thirdDate-constraint="0" expand="true"/>
+        <task id="60" name="コントローラー操作作成" color="#8cb6ce" meeting="false" start="2018-04-12" duration="36" complete="0" thirdDate="2018-04-13" thirdDate-constraint="0" expand="true">
+            <depend id="72" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="15" name="サウンドエフェクト" color="#8cb6ce" meeting="false" start="2018-04-18" duration="7" complete="0" thirdDate="2018-04-16" thirdDate-constraint="0" expand="true"/>
+        <task id="9" name="BGM(環境音)" color="#8cb6ce" meeting="false" start="2018-04-18" duration="7" complete="0" thirdDate="2018-04-16" thirdDate-constraint="0" expand="true"/>
+        <task id="14" name="ライティング設定" color="#8cb6ce" meeting="false" start="2018-05-10" duration="7" complete="0" thirdDate="2018-05-01" thirdDate-constraint="0" expand="true"/>
+        <task id="72" name="テスト" color="#8cb6ce" meeting="false" start="2018-06-01" duration="7" complete="0" thirdDate="2018-06-01" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="志和地　雄大" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="1" name="重松　勇貴" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="2" name="中島　蓮" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="3" name="佐藤　照朗" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="73" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="74" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="42" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="21" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="97" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="97" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="12" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="33" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="35" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="97" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="37" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="39" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="41" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="97" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
