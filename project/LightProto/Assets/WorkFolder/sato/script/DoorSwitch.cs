@@ -4,37 +4,29 @@ using UnityEngine;
 
 public class DoorSwitch : MonoBehaviour
 {
-    private Renderer _renderer;
+    private Renderer    _renderer;
+    private bool dSwitch;
 
     // Use this for initialization
     void Start()
     {
         _renderer = GetComponent<Renderer>();
-        StartCoroutine(BlinkerCoroutine());
-
-
+        dSwitch = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-
-    IEnumerator BlinkerCoroutine()
-    {
-        //こちらは動く例
-        //変更前のマテリアルのコピーを保存
-        var originalMaterial = new Material(_renderer.material);
-        for (; ; )
+        if (Input.GetMouseButtonUp(1))
+        {
+            dSwitch = !dSwitch;
+        }
+        else if (dSwitch)
         {
             _renderer.material.EnableKeyword("_EMISSION"); //キーワードの有効化を忘れずに
-            _renderer.material.SetColor("_EmissionColor", new Color(1, 0, 0)); //赤色に光らせる
-            yield return new WaitForSeconds(1.0f); //1秒待って
-            _renderer.material = originalMaterial; //元に戻す
-            yield return new WaitForSeconds(1.0f); //また1秒待ってくりかえし
+            _renderer.material.SetColor("_EmissionColor", new Color(0, 1, 0)); //赤色に光らせる
         }
+        else _renderer.material.SetColor("_EmissionColor", new Color(0, 0, 0));
     }
 
 }
