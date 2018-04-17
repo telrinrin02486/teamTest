@@ -12,6 +12,8 @@ public class DoorSwitch : MonoBehaviour
     {
         _renderer = GetComponent<Renderer>();
         dSwitch = false;
+        _renderer.material.EnableKeyword("_EMISSION"); //キーワードの有効化を忘れずに
+        _renderer.material.SetColor("_EmissionColor", new Color(1, 0, 0));
     }
 
     // Update is called once per frame
@@ -23,10 +25,9 @@ public class DoorSwitch : MonoBehaviour
         }
         else if (dSwitch)
         {
-            _renderer.material.EnableKeyword("_EMISSION"); //キーワードの有効化を忘れずに
-            _renderer.material.SetColor("_EmissionColor", new Color(0, 1, 0)); //赤色に光らせる
+            _renderer.material.SetColor("_EmissionColor", new Color(0, 1, 0)); 
         }
-        else _renderer.material.SetColor("_EmissionColor", new Color(0, 0, 0));
+        else _renderer.material.SetColor("_EmissionColor", new Color(1, 0, 0));
     }
 
 }
