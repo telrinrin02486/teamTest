@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorSwitch : MonoBehaviour
+public class DoorButton : MonoBehaviour
 {
-    private Renderer    _renderer;
-    private bool dSwitch;
+    private Renderer _renderer;
+    private bool dbutton;
 
     // Use this for initialization
     void Start()
     {
         _renderer = GetComponent<Renderer>();
-        dSwitch = false;
+        dbutton = false;
         _renderer.material.EnableKeyword("_EMISSION"); //キーワードの有効化を忘れずに
         _renderer.material.SetColor("_EmissionColor", new Color(1, 0, 0));
     }
@@ -21,11 +21,11 @@ public class DoorSwitch : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(1))
         {
-            dSwitch = !dSwitch;
+            dbutton = !dbutton;
         }
-        else if (dSwitch)
+        else if (dbutton)
         {
-            _renderer.material.SetColor("_EmissionColor", new Color(0, 1, 0)); 
+            _renderer.material.SetColor("_EmissionColor", new Color(0, 1, 0));
         }
         else _renderer.material.SetColor("_EmissionColor", new Color(1, 0, 0));
     }
