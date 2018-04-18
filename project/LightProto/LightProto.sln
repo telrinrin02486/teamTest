@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightProto", "LightProto.csproj", "{F0433FD4-7B10-B03A-DF7C-7BA8222CDF76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightProto.Editor", "LightProto.Editor.csproj", "{F1D69E16-B5A3-1E1D-0AC7-E696626A3F1B}"
