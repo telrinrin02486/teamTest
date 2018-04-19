@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/LightTest.unity
     guid: 78e72c3197f458e46a4ce2ea906d3281
-  - enabled: 1
+  - enabled: 0
     path: Assets/WorkFolder/sato/scene/ButtonTest.unity
     guid: baafc21173896944a94ca63f78888169
+  - enabled: 1
+    path: Assets/WorkFolder/sato/scene/camPanelTest.unity
+    guid: 7fc22d5928fe32b4996f521db6d8e8d9
