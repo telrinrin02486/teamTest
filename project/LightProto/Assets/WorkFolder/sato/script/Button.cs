@@ -2,48 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour {
+public class Button : MonoBehaviour
+{
+    private GameObject  camPanel;
+    private CamPanel    script;
+    private string      preElm;     //前回の要素数
+
 
     /// ボタンをクリックした時の処理
-    public void OnClick()
+     void Start()
     {
-        switch (transform.name)
+        preElm = "end";
+    }
+
+public void OnClick()
+    {
+        if (preElm != transform.name)
         {
-            case "CAM1A":
-                Debug.Log("1A");
-                break;
-            case "CAM1B":
-                Debug.Log("1B");
-                break;
-            case "CAM1C":
-                Debug.Log("1C");
-                break;
-            case "CAM2A":
-                Debug.Log("2A");
-                break;
-            case "CAM2B":
-                Debug.Log("2B");
-                break;
-            case "CAM4A":
-                Debug.Log("4A");
-                break;
-            case "CAM4B":
-                Debug.Log("4B");
-                break;
-            case "CAM3":
-                Debug.Log("3");
-                break;
-            case "CAM5":
-                Debug.Log("5");
-                break;
-            case "CAM6":
-                Debug.Log("6");
-                break;
-            case "CAM7":
-                Debug.Log("7");
-                break;
-            default:
-                break;
+            camPanel = GameObject.Find("camPanel");          //Unityちゃんをオブジェクトの名前から取得して変数に格納する
+            script = camPanel.GetComponent<CamPanel>();      //unitychanの中にあるUnityChanScriptを取得して変数に格納する
+
+
+            //全体のflagを初期化
+            List<string> keyList = new List<string>(script.dictionary.Keys);
+            foreach (string key in keyList)
+            {
+                script.dictionary[key] = false;
+            }
+
+            script.dictionary[transform.name] = true;   //今回の要素をture
+            preElm = transform.name;                    //前回の要素番号を記録
+            foreach (KeyValuePair<string, bool> pair in script.dictionary)
+            {
+                Debug.Log(string.Format("Key : {0} / Value : {1}", pair.Key, pair.Value));
+            }
         }
     }
 }

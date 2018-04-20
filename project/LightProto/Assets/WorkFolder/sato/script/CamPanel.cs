@@ -5,28 +5,33 @@ using UnityEngine;
 
 public class CamPanel : MonoBehaviour
 {
-    private Renderer _renderer;
 
+    //各部屋の管理Dictionary
+    public Dictionary<string, bool> dictionary = new Dictionary<string, bool>()
+    {
+        {"CAM1A", false},{"CAM1B", false},{"CAM1C", false},
+        {"CAM2A", false},{"CAM2B", false},
+        {"CAM4A", false},{"CAM4B", false},
+        {"CAM3" , false},{"CAM5" , false},{"CAM6" , false},{"CAM7", false},
+        {"end"  , false}
+    };   
+    
+    
     // Use this for initialization
     void Start()
     {
-        _renderer = GetComponent<Renderer>();
-        StartCoroutine(BlinkerCoroutine());
+        
     }
 
-    void Update() { }
-
-    IEnumerator BlinkerCoroutine()
+    void Update()
     {
-        //こちらは動く例
-        //変更前のマテリアルのコピーを保存
-        var originalMaterial = new Material(_renderer.material);
-        while (true)
-        {
-            _renderer.material.SetColor("_EmissionColor", new Color(0, 1, 0));
-            yield return new WaitForSeconds(1.0f); //1秒待って
-            _renderer.material = originalMaterial; //元に戻す
-            yield return new WaitForSeconds(1.0f); //また1秒待ってくりかえし
-        }
+
+
+
+
+
+
     }
+
+   
 }
