@@ -285,11 +285,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Dive\Scripts\DiveJava.cs" />
-    <Compile Include="Assets\Dive\Scripts\DiveMouseLook.cs" />
-    <Compile Include="Assets\Dive\Scripts\NaturalOrientation.cs" />
-    <Compile Include="Assets\Dive\Scripts\OffsetCenter.cs" />
-    <Compile Include="Assets\Dive\Scripts\OpenDiveSensor.cs" />
     <Compile Include="Assets\DoorMove.cs" />
     <Compile Include="Assets\GyroScript.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
@@ -339,14 +334,11 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\WorkFolder\sato\script\CamBtn.cs" />
     <Compile Include="Assets\WorkFolder\sato\script\CamBtnCtl.cs" />
-    <Compile Include="Assets\WorkFolder\sato\script\DoorButton.cs" />
-    <Compile Include="Assets\WorkFolder\sato\script\LightButton.cs" />
+    <Compile Include="Assets\WorkFolder\sato\script\DBtn.cs" />
+    <Compile Include="Assets\WorkFolder\sato\script\DBtnCtl.cs" />
     <Compile Include="Assets\WorkFolder\sato\script\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Dive\CHANGELOG.TXT" />
-    <None Include="Assets\Dive\LICENCE.TXT" />
-    <None Include="Assets\Dive\README.TXT" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

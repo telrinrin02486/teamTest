@@ -289,10 +289,6 @@
       <Project>{F0433FD4-7B10-B03A-DF7C-7BA8222CDF76}</Project>
       <Name>LightProto</Name>
     </ProjectReference>
-    <ProjectReference Include="LightProto.unityproj">
-      <Project>{F0433FD4-7B10-B03A-DF7C-7BA8222CDF76}</Project>
-      <Name>LightProto</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
@@ -331,9 +327,6 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Dive\CHANGELOG.TXT" />
-    <None Include="Assets\Dive\LICENCE.TXT" />
-    <None Include="Assets\Dive\README.TXT" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
