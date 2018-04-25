@@ -10,19 +10,23 @@ public class CamBtnCtl : Singleton<CamBtnCtl>
     private Button[] btnImage;
     private ColorBlock[] colorBlock;
     private Vector4 green, black;
-    public string buttonName;
+    public string nowBtnName, preBtnName;
     private int buttonMax;
+    Coroutine coroutine;
     private float span;
-    private int count;
+ 
     // Use this for initialization
     private void Start()
     {
         Init();
-        StartCoroutine(Logging());
+        coroutine = StartCoroutine(Logging());
     }
 
     //Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        preBtnName = nowBtnName;
+    }
 
     private void Init()
     {
@@ -33,7 +37,8 @@ public class CamBtnCtl : Singleton<CamBtnCtl>
         btnsName = new string[buttonMax];
         btnImage = GetComponentsInChildren<Button>();
         colorBlock = new ColorBlock[buttonMax];
-        buttonName = "NON";
+        nowBtnName = "CAM1A";
+        preBtnName = nowBtnName;
         span = 1.0f;
         foreach (Transform child in transform)
         {
@@ -49,54 +54,51 @@ public class CamBtnCtl : Singleton<CamBtnCtl>
             colorBlock[i].pressedColor = black;
             btnImage[i].colors = colorBlock[i];
         }
-        Debug.Log("init()");
-
-        count = 0;
+        
     }
 
     private IEnumerator Logging()
     {
         while (true)
         {
-            if (!(string.Equals(GetBtnName(), "NON")))
+            //Debug.Log("start" + GetBtnName());
+            for (int i = 0; i < buttonMax; i++)
             {
-                Debug.Log("きた～！" + GetBtnName() + count);
-                for (int i = 0; i < buttonMax; i++)
+                if (nowBtnName == btnsName[i])
                 {
-                    if (GetBtnName() == btnsName[i])
+                    Debug.Log("きた～！" + GetBtnName());
+                    //green
+                    colorBlock[i].highlightedColor = green;
+                    colorBlock[i].normalColor = green;
+                    colorBlock[i].pressedColor = green;
+                    btnImage[i].colors = colorBlock[i];
+                    yield return new WaitForSeconds(span);
+                    //black
+                    colorBlock[i].highlightedColor = black;
+                    colorBlock[i].normalColor = black;
+                    colorBlock[i].pressedColor = black;
+                    btnImage[i].colors = colorBlock[i];
+                    yield return new WaitForSeconds(span);
+
+                    if (preBtnName != nowBtnName)
                     {
-                        //green
-                        yield return new WaitForSeconds(span);
-                        colorBlock[i].highlightedColor = green;
-                        colorBlock[i].normalColor = green;
-                        colorBlock[i].pressedColor = green;
-                        btnImage[i].colors = colorBlock[i];
-                        //black
-                        yield return new WaitForSeconds(span);
-                        colorBlock[i].highlightedColor = black;
-                        colorBlock[i].normalColor = black;
-                        colorBlock[i].pressedColor = black;
-                        btnImage[i].colors = colorBlock[i];
+                       
+                        StopCoroutine(coroutine);
                     }
                 }
             }
-            else
-            {
-                Debug.Log("なんでやねん" + GetBtnName() + count);
-                yield return new WaitForSeconds(span);
-            }
-            count++;
+            //Debug.Log("end" + GetBtnName());
         }
     }
 
 
     public void SetBtnName(string _name)
     {
-        buttonName = _name;
+        nowBtnName = _name;
     }
 
     public string GetBtnName()
     {
-        return buttonName;
+        return nowBtnName;
     }
 }
