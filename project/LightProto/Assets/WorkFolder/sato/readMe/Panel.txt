@@ -1,0 +1,2 @@
+・Panel(Canvas)のコンポーネント
+	Canvas->RenderCameraにMainCameraをアタッチして使ってね
